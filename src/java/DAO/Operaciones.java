@@ -19,11 +19,10 @@ public class Operaciones {
     
     public Persona getPersona (Persona p, SessionFactory con){
        Session sess = con.openSession();
-        Transaction t = sess.beginTransaction();
         Query q = sess.createQuery("FROM Persona WHERE nif = :nifV");
         q.setParameter("nifV", p.getNif());
-        
-        return p;
+        Persona persona = (Persona)q.uniqueResult();
+        return persona;
 
     }    
 }
