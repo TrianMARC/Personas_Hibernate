@@ -36,7 +36,7 @@ public class Dispatcher extends HttpServlet {
         ServletContext sc = getServletContext();
         String accion=request.getParameter("accion");
         RequestDispatcher rd;
-        
+
         rd=sc.getRequestDispatcher("/"+accion);
         rd.forward(request,response);
     }

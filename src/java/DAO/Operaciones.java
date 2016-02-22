@@ -5,10 +5,25 @@
  */
 package DAO;
 
+import POJO.Persona;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
 /**
  *
  * @author victo
  */
 public class Operaciones {
     
+    public Persona getPersona (Persona p, SessionFactory con){
+       Session sess = con.openSession();
+        Transaction t = sess.beginTransaction();
+        Query q = sess.createQuery("FROM Persona WHERE nif = :nifV");
+        q.setParameter("nifV", p.getNif());
+        
+        return p;
+
+    }    
 }

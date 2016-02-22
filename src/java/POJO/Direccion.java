@@ -1,5 +1,5 @@
 package POJO;
-// Generated 12-feb-2016 13:14:56 by Hibernate Tools 4.3.1
+// Generated 22-feb-2016 12:29:51 by Hibernate Tools 4.3.1
 
 
 
@@ -85,11 +85,6 @@ public class Direccion  implements java.io.Serializable {
     
     public void setPersona(Persona persona) {
         this.persona = persona;
-    }
-
-    @Override
-    public String toString() {
-        return "Direccion{" + "id=" + id + ", calle=" + calle + ", numero=" + numero + ", piso=" + piso + ", ciudad=" + ciudad + ", zip=" + zip + '}';
     }
 
 

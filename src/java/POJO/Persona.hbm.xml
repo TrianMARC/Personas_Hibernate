@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 12-feb-2016 13:14:56 by Hibernate Tools 4.3.1 -->
+<!-- Generated 22-feb-2016 12:29:52 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="POJO.Persona" table="persona" catalog="db_personas" optimistic-lock="version">
+    <class name="POJO.Persona" table="persona" catalog="db_personas_hibe" optimistic-lock="version">
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
             <generator class="foreign">
@@ -16,6 +16,9 @@
         </property>
         <property name="apellidos" type="string">
             <column name="APELLIDOS" length="50" />
+        </property>
+        <property name="nif" type="string">
+            <column name="NIF" length="9" />
         </property>
     </class>
 </hibernate-mapping>

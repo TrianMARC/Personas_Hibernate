@@ -1,5 +1,5 @@
 package POJO;
-// Generated 12-feb-2016 13:14:56 by Hibernate Tools 4.3.1
+// Generated 22-feb-2016 12:29:51 by Hibernate Tools 4.3.1
 
 
 
@@ -13,6 +13,7 @@ public class Persona  implements java.io.Serializable {
      private Direccion direccion;
      private String nombre;
      private String apellidos;
+     private String nif;
 
     public Persona() {
     }
@@ -21,10 +22,11 @@ public class Persona  implements java.io.Serializable {
     public Persona(Direccion direccion) {
         this.direccion = direccion;
     }
-    public Persona(Direccion direccion, String nombre, String apellidos) {
+    public Persona(Direccion direccion, String nombre, String apellidos, String nif) {
        this.direccion = direccion;
        this.nombre = nombre;
        this.apellidos = apellidos;
+       this.nif = nif;
     }
    
     public Integer getId() {
@@ -55,10 +57,12 @@ public class Persona  implements java.io.Serializable {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-
-    @Override
-    public String toString() {
-        return "Persona{" + "id=" + id + ", direccion=" + direccion + ", nombre=" + nombre + ", apellidos=" + apellidos + '}';
+    public String getNif() {
+        return this.nif;
+    }
+    
+    public void setNif(String nif) {
+        this.nif = nif;
     }
 
 
